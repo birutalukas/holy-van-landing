@@ -1,10 +1,15 @@
 <section id="contact" class="contact">
     <div class="container">
         <?php if ( $contact_title = get_field('contact_title') ) : ?>
-            <h2 class="contact__section-heading"><?= $contact_title; ?></h2>
+            <h2 class="contact__section-heading slide-up"><?= $contact_title; ?></h2>
         <?php endif; ?>
 
-        <?php the_field('contact_description'); ?>
+        <?php if ( $contact_descr = get_field('contact_description') ) : ?>
+            <div class="slide-up">
+                <?= $contact_descr; ?>
+            </div>
+        <?php endif; ?>
+        
     </div>
     <div class="flex-container contact__forms">
         <div class="content--left">

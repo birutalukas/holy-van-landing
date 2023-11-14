@@ -1,0 +1,38 @@
+.slide {
+    &-up {
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        transform: translateY(100px);
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &-down {
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        transform: translateY(-50px);
+        &.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    &-right {
+        transition: 0.5s ease-in-out;
+        opacity: 0;
+        transform: translateX(-100px);
+        &.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    &-left {
+        opacity: 0;
+        transform: translateX(100px);
+        transition: 0.5s ease-in-out;
+        &.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+}

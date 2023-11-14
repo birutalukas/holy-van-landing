@@ -8,7 +8,7 @@
                 <?php if ( $image = get_sub_field('image') ) : ?>
 
                     <div class="hero__slide" style="background:linear-gradient(#000000, #00000000), url(<?= $image['url']; ?>); background-size: cover;">
-                        <div class="container hero__slide-content">
+                        <div class="container hero__slide-content slide-left">
                             
                             <?php if ( $intro = get_sub_field('introduction') ) : ?>
                                 <span><?= $intro; ?></span>

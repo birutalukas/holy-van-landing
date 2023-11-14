@@ -2,7 +2,7 @@
 <?php $bullet_2_title = get_field('bullet_2_title'); ?>
 <?php $bullet_3_title = get_field('bullet_3_title'); ?>
 <section class="how-it-works" id="how-it-works">
-    <div class="container">
+    <div class="container slide-up">
         
         <?php if ( $how_head = get_field('how_heading') ) : ?>
             <h2><?= $how_head; ?></h2>
@@ -26,17 +26,17 @@
 
         <div class="flex-container how-it-works__bullets">
 
-            <div class="bullet bullet--narrow">
+            <div class="bullet bullet--narrow slide-left">
                 <h3><?= $bullet_1_title; ?></h3>
                 <?php the_field('bullet_1_description'); ?>
             </div>
 
-            <div class="bullet bullet--wide">
+            <div class="bullet bullet--wide slide-left">
                 <h3><?= $bullet_2_title; ?></h3>
                 <?php the_field('bullet_2_description'); ?>
             </div>
 
-            <div class="bullet bullet--narrow bullet--last">
+            <div class="bullet bullet--narrow bullet--last slide-left">
                 <h3><?= $bullet_3_title; ?></h3>
                 <?php the_field('bullet_3_description'); ?>
             </div>

@@ -4,7 +4,7 @@
 
         <div class="gallery__overlay"></div>
         
-        <div class="gallery--left">
+        <div class="gallery--left slide-left">
 
             <?php if ( $gal_title = get_field('gallery_title') ) : ?>
                 <h2><?= $gal_title; ?></h2>

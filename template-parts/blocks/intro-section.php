@@ -5,7 +5,7 @@ $intro_description = get_field('intro_description');
 
 <?php if ( $intro_head || $intro_description) : ?>
 
-    <section class="flex-container intro__wrapper" id="intro">
+    <section class="flex-container intro__wrapper slide-up" id="intro">
         <div class="content--left">
         
             <?php if ( $intro_head ) : ?>
@@ -20,7 +20,7 @@ $intro_description = get_field('intro_description');
 
             <?php endif; ?>
         </div>
-        <div class="content--right">
+        <div class="content--right slide-up">
             <?= $intro_description; ?>
         </div>
     </section>

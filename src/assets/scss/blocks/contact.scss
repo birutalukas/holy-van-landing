@@ -3,6 +3,7 @@
     background-color: #f9fafb;
     @include responsive(920px) {
         padding-bottom: 16px;
+        padding-top: 72px;
     }
     .container {
         text-align: center;
