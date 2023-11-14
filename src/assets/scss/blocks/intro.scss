@@ -1,0 +1,31 @@
+.intro {
+    &__wrapper {
+        margin: 0 16px;
+        @include responsive(920px) {
+            width: calc(100% - 32px);
+            padding: 64px 0 40px 0;
+        }
+        @include mfresponsive(920px) {
+            margin: 0 auto;
+            padding: 112px 0 96px 0;
+        }
+        img {
+            @include responsive(920px) {
+                display: none;
+            }
+        }
+        h2 {
+            font-family: "Clash Display", sans-serif;
+            @include fluid-type(font-size, 360px, 1366px, 28px, 40px);
+            @include fluid-type(line-height, 360px, 1366px, 32px, 44px);
+            color: $black;
+            margin: 0;
+        }
+        p {
+            @include fluid-type(font-size, 360px, 1366px, 18px, 24px);
+            @include fluid-type(line-height, 360px, 1366px, 28px, 36px);
+            color: $dark;
+        }
+        border-bottom: 1px solid #dddddd;
+    }
+}

@@ -1,0 +1,156 @@
+.contact {
+    padding: 95px 0;
+    background-color: #f9fafb;
+    @include responsive(920px) {
+        padding-bottom: 16px;
+    }
+    .container {
+        text-align: center;
+        margin-bottom: 48px;
+        padding: 0 8%;
+        h2 {
+            position: relative;
+            @include fluid-type(font-size, 360px, 1366px, 32px, 40px);
+            line-height: 40px;
+            font-weight: 600;
+            letter-spacing: 1%;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0;
+            &::before {
+                position: absolute;
+                content: url(../../assets/images/title-svg.svg);
+                left: -32px;
+                top: -32px;
+                @include responsive(438px) {
+                    left: 12%;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            max-width: 550px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
+    .flex-container {
+        @include responsive(920px) {
+            padding: 0;
+            margin-bottom: 0;
+        }
+    }
+    &__forms {
+        form {
+            background-color: $white;
+            box-shadow: 0px 10px 20px -2px #10182826;
+            padding: 48px 32px;
+            border-radius: 40px;
+            width: 100%;
+            @include responsive(920px) {
+                margin-bottom: 48px;
+                border-radius: 0;
+                padding: 48px 16px;
+            }
+            .form {
+                &__title {
+                    text-align: left;
+                    @include responsive(920px) {
+                        text-align: center;
+                    }
+                    h3 {
+                        margin-top: 0;
+                        @include fluid-type(
+                            font-size,
+                            360px,
+                            1366px,
+                            22px,
+                            24px
+                        );
+                        @include fluid-type(
+                            line-height,
+                            360px,
+                            1366px,
+                            22px,
+                            24px
+                        );
+                    }
+                }
+                &__row {
+                    margin-bottom: 24px;
+                    text-align: left;
+                    label {
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 700;
+                        margin-bottom: 6px;
+                        width: 100%;
+                        display: block;
+                        span {
+                            font-weight: 500;
+                            color: $error;
+                        }
+                    }
+                    input,
+                    select,
+                    textarea {
+                        width: 100%;
+                        text-align: left;
+                        border: 1px solid #d0d5dd;
+                        border-radius: 24px;
+                        box-shadow: 0px 1px 2px 0px #1018280d;
+                        background-color: $white;
+                        color: $gray900;
+                        padding: 10px 20px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 400;
+                        &::placeholder {
+                            color: $dark-gray;
+                        }
+                    }
+                    &--acceptance {
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        margin-bottom: 32px;
+                        input[type="checkbox"] {
+                            margin-right: 12px;
+                        }
+                        label {
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-weight: 500;
+                            span {
+                                font-weight: 500;
+                                color: $error;
+                            }
+                        }
+                    }
+                    input[type="submit"] {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 32px;
+                        font-size: 16px;
+                        line-height: 21px;
+                        font-weight: 700;
+                        letter-spacing: 2%;
+                        background-color: $primary;
+                        padding: 16px 32px;
+                        color: $white;
+                        width: fit-content;
+                        cursor: pointer;
+                        appearance: none;
+                        outline: none;
+                        @include responsive(920px) {
+                            margin-left: auto;
+                            margin-right: auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,142 @@
+.how-it-works {
+    padding-top: 40px;
+    padding-bottom: 64px;
+    @include mfresponsive(920px) {
+        padding-top: 80px;
+
+        padding-bottom: 48px;
+    }
+    h2 {
+        font-family: "Clash Display", sans-serif;
+        @include fluid-type(font-size, 360px, 1366px, 24px, 32px);
+        @include fluid-type(line-height, 360px, 1366px, 32px, 36px);
+        color: $black;
+        margin-bottom: 16px;
+        margin-top: 0;
+    }
+    p {
+        font-size: 20px;
+        line-height: 27px;
+    }
+
+    &__bullets {
+        background-image: url(../../assets/images/bg-map.svg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        @include responsive(920px) {
+            background-image: none;
+        }
+        .bullet {
+            text-align: center;
+            margin-bottom: 48px;
+            padding: 0 32px;
+
+            &--narrow {
+                width: 25%;
+            }
+            &--wide {
+                width: 50%;
+            }
+            &--last {
+                p {
+                    &::before {
+                        display: none;
+                    }
+                }
+            }
+            @include responsive(920px) {
+                width: 100%;
+                padding: 0;
+                text-align: left;
+                margin-bottom: 0;
+                &:first-child {
+                    margin-top: 36px;
+                }
+            }
+            h3 {
+                @include fluid-type(font-size, 360px, 1366px, 32px, 40px);
+                @include fluid-type(line-height, 360px, 1366px, 32px, 30px);
+                margin: 24px 0;
+                color: $primary;
+                position: relative;
+                @include responsive(920px) {
+                    padding-left: 48px;
+                    margin: 0;
+                }
+                &::before {
+                    content: "";
+                    width: 24px;
+                    height: 24px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: $primary-second;
+                    @include mfresponsive(920px) {
+                        display: none;
+                    }
+                }
+            }
+            p {
+                @include responsive(920px) {
+                    padding-left: 48px;
+                    position: relative;
+                    padding-top: 16px;
+                    padding-bottom: 36px;
+                    margin-top: 8px;
+                    margin-bottom: 8px;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 12px;
+                        top: 0;
+                        bottom: 0;
+                        height: 100%;
+                        width: 5px;
+                        background-image: url(../../assets/images/line-vertical.svg);
+                        background-position: center;
+                        background-size: cover;
+                        background-repeat: repeat-y;
+                    }
+                }
+            }
+        }
+    }
+    &__bulletpoints {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 13%;
+        margin-top: 54px;
+        width: calc(100% - 40px);
+        @include responsive(920px) {
+            display: none;
+        }
+        .connection {
+            background-image: url(../../assets/images/line-horizontal.svg);
+            background-position: center;
+            background-size: contain;
+            background-repeat: repeat-x;
+            flex: 1;
+            height: 10px;
+            margin: 0 10px;
+            box-sizing: content-box;
+        }
+        .bulletpoint {
+            width: 42px;
+            height: 42px;
+            background-color: $primary_second;
+            border-radius: 50%;
+        }
+    }
+    &__cta {
+        width: 100%;
+        .btn {
+            @include mfresponsive(920px) {
+                margin-bottom: 192px;
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+// Settings
+@import "./settings/reset";
+@import "./settings/mixins";
+@import "./settings/colors";
+@import "./settings/typography";
+@import "./settings/layout";
+
+@import "./components/navbar";
+
+// Init Sliders
+@import "./components/sliders";
+
+// Section Blocks
+@import "./blocks/hero";
+@import "./blocks/intro";
+@import "./blocks/how-it-works";
+@import "./blocks/gallery";
+@import "./blocks/quote";
+@import "./blocks/contact";
+
+// Components
+@import "./components/buttons";
+@import "./components/footer";

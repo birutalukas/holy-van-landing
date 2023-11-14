@@ -1,0 +1,54 @@
+.container {
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+    @include mfresponsive(1366px) {
+        width: 90%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    @include mfresponsive(1920px) {
+        width: 64%;
+    }
+}
+.flex-container {
+    @extend .container;
+    display: flex;
+    flex-wrap: wrap;
+    &.no-wrap {
+        flex-wrap: nowrap;
+        .content--left {
+            width: 50% !important;
+            padding-right: 16px !important;
+            @include responsive(920px) {
+                padding-right: 0px !important;
+            }
+        }
+        .content--right {
+            width: 50% !important;
+            padding-left: 16px !important;
+            @include responsive(920px) {
+                padding-left: 0px !important;
+            }
+        }
+    }
+}
+.content {
+    &--left {
+        width: 50%;
+        padding-right: 16px;
+        @include responsive(992px) {
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    &--right {
+        width: 50%;
+        padding-left: 16px;
+        @include responsive(992px) {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.quote {
+    padding: 112px 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    &__content {
+        margin: 0 auto;
+        text-align: center;
+        @include mfresponsive(920px) {
+            max-width: 60%;
+        }
+        p {
+            font-family: "Clash Display", sans-serif;
+            @include fluid-type(font-size, 360px, 1366px, 20px, 24px);
+            @include fluid-type(line-height, 360px, 1366px, 26px, 30px);
+            font-weight: 600;
+            letter-spacing: 1%;
+            color: $white;
+            margin-bottom: 24px;
+        }
+    }
+    &__author {
+        @include fluid-type(font-size, 360px, 1366px, 14px, 16px);
+        @include fluid-type(line-height, 360px, 1366px, 18px, 22px);
+        font-weight: 600;
+        letter-spacing: 5%;
+        color: $white;
+        text-transform: uppercase;
+    }
+}
