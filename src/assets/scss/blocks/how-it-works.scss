@@ -114,6 +114,9 @@
         @include responsive(920px) {
             display: none;
         }
+        @include mfresponsive(1920px) {
+            width: 75%;
+        }
         .connection {
             background-image: url(../../assets/images/line-horizontal.svg);
             background-position: center;

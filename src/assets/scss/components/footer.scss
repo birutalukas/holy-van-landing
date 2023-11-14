@@ -36,6 +36,17 @@ footer {
             color: $dark;
         }
     }
+    .flex-container.no-wrap {
+        @include mfresponsive(1920px) {
+            width: 90%;
+            .content--left {
+                width: 65% !important;
+            }
+            .content--right {
+                width: 35% !important;
+            }
+        }
+    }
     .menu-footer-menu-container {
         ul {
             display: flex;
